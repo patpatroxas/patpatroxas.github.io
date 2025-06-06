@@ -6,16 +6,19 @@
   <title>John Patrick Roxas | Software Engineer Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #f0f4f8, #e4ebf3);
-      color: #333;
+      background-color: #000;
+      color: #f0f0f0;
       line-height: 1.6;
     }
     header {
-      background-color: #0d6efd;
+      background-color: #111;
       color: white;
       padding: 40px 20px;
       text-align: center;
@@ -28,25 +31,50 @@
       font-size: 1.2rem;
       margin: 10px 0;
     }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111;
+      padding: 10px 0;
+      z-index: 100;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    nav a {
+      color: #0d6efd;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f0f0f0;
+    }
     section {
-      padding: 40px 20px;
+      padding: 80px 20px 40px;
       max-width: 900px;
       margin: auto;
     }
     h2 {
       color: #0d6efd;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid #444;
       padding-bottom: 5px;
       margin-bottom: 20px;
       font-size: 1.8rem;
     }
     .project, .experience {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: #1a1a1a;
+      border: 1px solid #333;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover, .experience:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     ul {
       list-style-type: disc;
@@ -55,10 +83,10 @@
     footer {
       text-align: center;
       padding: 20px;
-      background: #f1f1f1;
-      margin-top: 40px;
+      background: #111;
       font-size: 0.9rem;
       color: #666;
+      margin-top: 40px;
     }
     a.button {
       display: inline-block;
@@ -74,21 +102,38 @@
     a.button:hover {
       background: #0056b3;
     }
+    /* Make nav work on mobile */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#trainings">Trainings</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <h1>John Patrick Roxas</h1>
     <p>Software Engineer | Full Stack Developer | Application Support Specialist</p>
     <a class="button" href="Roxas_JP_CV.pdf" download>Download My CV (PDF)</a>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>Results-driven Full Stack Engineer with 3+ years of experience developing, securing, and supporting enterprise applications. Skilled in C#, ASP.NET, Azure DevOps, PowerShell, and AWS with a strong focus on automation and system reliability. Seeking to contribute to dynamic software teams where I can apply my full stack and DevOps expertise to deliver scalable, secure, and user-friendly solutions.</p>
   </section>
 
-  <section>
+  <section id="experience">
     <h2>Professional Experience</h2>
     <div class="experience">
       <h3>Accenture Inc. | Full Stack Engineer</h3>
@@ -106,7 +151,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>Self-Service Control Panel (SSCP)</h3>
@@ -122,7 +167,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li><strong>Languages:</strong> C#, JavaScript, PowerShell, SQL</li>
@@ -135,7 +180,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="trainings">
     <h2>Trainings</h2>
     <ul>
       <li>Red Hat Enterprise Linux Automation with Ansible — February 2025 — Red Hat</li>
@@ -145,17 +190,11 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Education & Certifications</h2>
-    <p><strong>Bachelor of Science in Electronics and Communications Engineering</strong><br>FEU Institute of Technology (2013 - 2021)</p>
-    <p><strong>Certification:</strong> Microsoft Certified: Azure Fundamentals (AZ-900)</p>
-  </section>
-
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Phone: 09369893831</p>
-    <p>Email: <a href="mailto:jpatrickroxas.243@gmail.com">jpatrickroxas.243@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/patrick-roxas-695b3a214" target="_blank">patrick-roxas-695b3a214</a></p>
+    <p>📞 Phone: 09369893831</p>
+    <p>📧 Email: <a href="mailto:jpatrickroxas.243@gmail.com" style="color:#0d6efd;">jpatrickroxas.243@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/patrick-roxas-695b3a214/" target="_blank" style="color:#0d6efd;">patrick-roxas-695b3a214</a></p>
   </section>
 
   <footer>
