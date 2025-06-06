@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John Patrick Roxas | Software Engineer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John Patrick Roxas | Software Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-color: #f5f7fa;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #007acc;
+      background-color: #0d6efd;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
     section {
-      padding: 30px;
-      max-width: 800px;
+      padding: 40px 20px;
+      max-width: 900px;
       margin: auto;
     }
-    h1, h2 {
-      color: #007acc;
-    }
-    .project {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 15px;
+    h2 {
+      color: #0d6efd;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
       margin-bottom: 20px;
-      border-radius: 5px;
+      font-size: 1.8rem;
+    }
+    .project, .experience {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
     }
     footer {
       text-align: center;
       padding: 20px;
       background: #f1f1f1;
       margin-top: 40px;
+      font-size: 0.9rem;
+      color: #666;
     }
     a.button {
       display: inline-block;
-      padding: 10px 15px;
-      background: #007acc;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0d6efd;
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #0056b3;
     }
   </style>
 </head>
@@ -53,23 +80,41 @@
   <header>
     <h1>John Patrick Roxas</h1>
     <p>Software Engineer | Full Stack Developer | Application Support Specialist</p>
-    <a class="button" href="JP_Roxas_CV.pdf" download>Download My CV</a>
+    <a class="button" href="Roxas_JP_CV.pdf" download>Download My CV (PDF)</a>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>I’m a software engineer with 3+ years of experience in full stack development, automation, and application support. I’ve worked on enterprise tools like the Self-Service Control Panel and Failover platform, using C#, ASP.NET, JavaScript, PowerShell, Terraform, and Azure DevOps.</p>
+    <p>Results-driven Full Stack Engineer with 3+ years of experience developing, securing, and supporting enterprise applications. Skilled in C#, ASP.NET, Azure DevOps, PowerShell, and AWS with a strong focus on automation and system reliability. Seeking to contribute to dynamic software teams where I can apply my full stack and DevOps expertise to deliver scalable, secure, and user-friendly solutions.</p>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="experience">
+      <h3>Accenture Inc. | Full Stack Engineer</h3>
+      <p><strong>2021 - Present</strong></p>
+      <ul>
+        <li>Enhanced and supported enterprise self-service applications, maintaining UI and API components for optimal performance.</li>
+        <li>Developed and secured the Self-Service Control Panel (SSCP) and Self-Service Failover platforms.</li>
+        <li>Implemented security features (logout, session timeout, vulnerability remediation) and backend security improvements using CyberArk PAM.</li>
+        <li>Built CI/CD pipelines with Azure DevOps; automated infrastructure using Terraform.</li>
+        <li>Automated database and system tasks with PowerShell and Ansible Playbooks.</li>
+        <li>Led Agile Scrum ceremonies (sprint retrospectives, demos) to foster collaboration and continuous improvement.</li>
+        <li>Migrated legacy components to .NET 6, implemented MSAL for secure authentication.</li>
+        <li>Performed peer code reviews and contributed to reusable Terraform modules and infrastructure standards.</li>
+      </ul>
+    </div>
   </section>
 
   <section>
     <h2>Projects</h2>
     <div class="project">
       <h3>Self-Service Control Panel (SSCP)</h3>
-      <p>An internal tool that allows teams to perform infrastructure tasks like managing IIS, viewing logs, and handling VM snapshots. I worked on both frontend security features and backend scripting for automation.</p>
+      <p>Internal tool allowing teams to manage infrastructure tasks such as IIS, logs, snapshots, and Windows services — reducing IT intervention and increasing deployment speed.</p>
     </div>
     <div class="project">
       <h3>Self-Service Failover</h3>
-      <p>A tool that migrated manual SQL failover steps into a secure, automated DevOps pipeline. I led the scripting and integration using PowerShell, Azure DevOps, and CyberArk for credential management.</p>
+      <p>Secure, automated DevOps pipeline that migrated manual SQL failover steps — built using PowerShell, Azure DevOps, and CyberArk.</p>
     </div>
   </section>
 
@@ -77,15 +122,24 @@
     <h2>Skills</h2>
     <ul>
       <li><strong>Languages:</strong> C#, JavaScript, PowerShell, SQL</li>
-      <li><strong>DevOps & Cloud:</strong> Azure DevOps, AWS Console, Terraform, Ansible</li>
-      <li><strong>Tools:</strong> Visual Studio, Postman, ServiceNow, CyberArk, Git</li>
-      <li><strong>Frameworks:</strong> ASP.NET, .NET 6, MSAL</li>
+      <li><strong>Cloud & DevOps:</strong> Azure DevOps, AWS Console, Terraform, Ansible</li>
+      <li><strong>Web & App Development:</strong> ASP.NET, Visual Studio 2022, .NET 6, MSAL</li>
+      <li><strong>Database:</strong> Microsoft SQL Server, pgAdmin, DynamoDB</li>
+      <li><strong>Tools:</strong> ServiceNow, Postman, CyberArk PAM, Git, Azure DevOps Pipelines</li>
+      <li><strong>Automation:</strong> PowerShell Scripts, Ansible Playbooks, Azure Pipelines</li>
+      <li><strong>Practices:</strong> CI/CD, Agile Scrum Framework</li>
     </ul>
   </section>
 
   <section>
+    <h2>Education & Certifications</h2>
+    <p><strong>Bachelor of Science in Electronics and Communications Engineering</strong><br>FEU Institute of Technology (2013 - 2021)</p>
+    <p><strong>Certification:</strong> Microsoft Certified: Azure Fundamentals (AZ-900)</p>
+  </section>
+
+  <section>
     <h2>Contact</h2>
-    <p>Email: jpatrickroxas.243@gmail.com</p>
+    <p>Email: <a href="mailto:jpatrickroxas.243@gmail.com">jpatrickroxas.243@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/patrick-roxas-695b3a214" target="_blank">patrick-roxas-695b3a214</a></p>
   </section>
 
